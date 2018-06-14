@@ -1,6 +1,4 @@
-FROM alpine:edge
-
-LABEL maintainer "Marvin Steadfast <marvin@xsteadfastx.org>"
+FROM resin/armhf-alpine:edge #alpine:edge for amd64
 
 ARG WALLABAG_VERSION=2.3.2
 
