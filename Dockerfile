@@ -1,7 +1,6 @@
 FROM arm32v7/ubuntu:latest
 
-RUN set -ex \
- && apt update \
+RUN apt update \
  && apt upgrade --fix-missing \
  && apt install \
       ansible \
