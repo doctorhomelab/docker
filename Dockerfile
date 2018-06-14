@@ -1,11 +1,11 @@
-FROM resin/armhf-alpine:edge #alpine:edge for amd64
+FROM arm32v7/ubuntu #alpine:edge for amd64
 
 ARG WALLABAG_VERSION=2.3.2
 
 RUN set -ex \
- && apk update \
- && apk upgrade --available \
- && apk add \
+ && apt update \
+ && apt upgrade --fix-missing \
+ && apt install \
       ansible \
       curl \
       git \
