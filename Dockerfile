@@ -1,4 +1,4 @@
-FROM arm32v7/ubuntu:latest #alpine:edge for amd64
+FROM arm32v7/ubuntu:latest
 
 RUN set -ex \
  && apt update \
