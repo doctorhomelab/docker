@@ -1,8 +1,11 @@
-FROM arm32v7/ubuntu:latest
+FROM arm64v8/alpine
 
-RUN apt update \
- && apt upgrade --fix-missing \
- && apt install \
+ARG WALLABAG_VERSION=2.3.2
+
+RUN set -ex \
+ && apk update \
+ && apk upgrade --available \
+ && apk add \
       ansible \
       curl \
       git \
