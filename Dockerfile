@@ -1,11 +1,11 @@
-FROM arm64v8/alpine
+FROM arm32v7/ubuntu
 
 ARG WALLABAG_VERSION=2.3.2
 
 RUN set -ex \
- && apk update \
- && apk upgrade --available \
- && apk add \
+ && apt update \
+ && apt upgrade \
+ && apt install \
       ansible \
       curl \
       git \
