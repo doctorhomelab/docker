@@ -1,6 +1,4 @@
-FROM arm32v7/ubuntu #alpine:edge for amd64
-
-ARG WALLABAG_VERSION=2.3.2
+FROM arm32v7/ubuntu:latest #alpine:edge for amd64
 
 RUN set -ex \
  && apt update \
