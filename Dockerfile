@@ -1,11 +1,12 @@
-FROM arm32v7/ubuntu
+#FROM easypi/alpine-arm
+FROM alpine:edge
 
 ARG WALLABAG_VERSION=2.3.2
 
 RUN set -ex \
- && apt update \
- && apt upgrade \
- && apt install \
+ && apk update \
+ && apk upgrade --available \
+ && apk add \
       ansible \
       curl \
       git \
